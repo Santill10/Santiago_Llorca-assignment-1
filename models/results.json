@@ -1,7 +1,13 @@
 {
   "best_C": 0.003,
+  "best_lr_manual": 0.1,
+  "best_lr_module": 0.1,
+  "epochs": 3000,
+  "weight_gap_manual_vs_sklearn": 5.885958671569824e-06,
+  "weight_gap_module_vs_sklearn": 5.543231964111328e-06,
   "lgd": 0.65,
   "margin": 0.1,
+  "n_features": 27,
   "feature_names": [
     "fico_mid",
     "loan_to_income",
@@ -51,12 +57,30 @@
       "test_cost_approve_all": 6299865.0
     },
     "sklearn": {
-      "threshold": 0.13405871205031872,
-      "val_auc": 0.6246804875158027,
-      "test_auc": 0.637968904952751,
-      "test_pr_auc": 0.22094734461620655,
+      "threshold": 0.13408196531236172,
+      "val_auc": 0.6246725861251581,
+      "test_auc": 0.6379749054843102,
+      "test_pr_auc": 0.22095891286210195,
       "val_cost": 3656351.25,
-      "test_cost": 4800578.75,
+      "test_cost": 4801418.75,
+      "test_cost_approve_all": 6299865.0
+    },
+    "pytorch_manual": {
+      "threshold": 0.13408222049474716,
+      "val_auc": 0.6246720922882428,
+      "test_auc": 0.6379749054843102,
+      "test_pr_auc": 0.22095635733447988,
+      "val_cost": 3656351.25,
+      "test_cost": 4801418.75,
+      "test_cost_approve_all": 6299865.0
+    },
+    "pytorch_module": {
+      "threshold": 0.13408228754997253,
+      "val_auc": 0.6246720922882428,
+      "test_auc": 0.6379747591298819,
+      "test_pr_auc": 0.22095635733447988,
+      "val_cost": 3656351.25,
+      "test_cost": 4801418.75,
       "test_cost_approve_all": 6299865.0
     }
   }
