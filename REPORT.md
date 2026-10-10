@@ -90,3 +90,4 @@ more time or data — not generic hedging.*
 ## Generative AI use disclosure
 
 *Per the syllabus AI Policy: what you used and how, or "no AI content used."*
+ 
