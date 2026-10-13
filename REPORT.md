@@ -1,9 +1,5 @@
 # Assignment 1 Report
 
-*Delete this italic guidance as you fill in each section. You'll be asked to
-defend any of this without your code in front of you — write only what you
-can actually explain.*
-
 - **Name**: Santiago Llorca
 - **Student ID**: 19952 
 - **Email**: sllorca.ieu2022@student.ie.edu
@@ -119,9 +115,10 @@ feature.
   rates are slightly higher for borrowers with a delinquency record. The
   coefficient is conditional on `fico_mid`, which already captures that
   information.
-- `verification_status=rare` shows no visible bar in the dashboard's
-  coefficient plot, which suggests that column is (almost) constant; I did not
-  investigate further.
+- - `verification_status=rare` has no visible bar in the dashboard's coefficient
+  plot: no verification level falls below the 1% threshold (the smallest has
+  5,418 of 18,000 loans), so that column is all zeros and its coefficient is
+  zero. It is harmless but redundant.
 
 
 
@@ -217,21 +214,19 @@ dashboard, rejecting everyone (5.74M) costs less than approving everyone
 ## Generative AI use disclosure
 
 I used Claude (Anthropic) as a study and coding assistant throughout this
-assignment, for:
-- **Choosing the dataset and the business case.** I discussed options with
-  Claude and chose Lending Club loan default, together with the design
-  decisions behind it (time-based split, target definition, cost-based
-  threshold, excluding the lender's own score).
-- **Code.** Claude helped me write the data preparation script, the feature
+assignment:
+- **Dataset and business case.** Claude proposed candidate datasets and design
+  options; I chose the Lending Club loan-default problem and the option of
+  excluding the lender's own score (`int_rate`, `grade`, `sub_grade`).
+- **Code.** Claude wrote the code for the data preparation script, the feature
   engineering module, the evaluation functions, the three training
-  implementations and the Gradio dashboard. I ran everything myself, checked
-  the outputs against each other (for example the three-way comparison and the
-  tolerance experiment), and [describe here what you modified or debugged
-  yourself].
+  implementations and the Gradio dashboard. I ran all of it myself, checked the
+  outputs against each other (for example the three-way comparison and the
+  tolerance experiment) and reran the full pipeline from scratch.
 - **Git/GitHub workflow.** Claude guided me through cloning my fork,
-  branching, committing and pushing.
-- **Report drafting.** Claude drafted initial versions of the report sections,
-  which I reviewed and edited.
+  branching, committing, pushing and opening the pull request.
+- **Report.** Claude drafted the report text from the results of my runs; I
+  reviewed it against my outputs.
 
 All final decisions and the content of this report are my responsibility, and
 I can explain each step of the pipeline.
